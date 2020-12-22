@@ -138,18 +138,7 @@ def calculateTotalRevenue(sheet1, row):
     sheet1.write(row, 6, total)
 
 
-main()
-
-'''
-schedule.every().tuesday.do(main)
-while True:
-    
-    start = time.time()
-    schedule.run_pending()
-    time.sleep(5)
-    end = time.time()
-    # If five seconds have elapsed, not tuesday, exit
-    if end - start > 0:
-        break
-        
-'''    
+if __name__ == "__main__":
+    time.sleep(10)
+    if datetime.today().weekday() == 1:
+        main();  
